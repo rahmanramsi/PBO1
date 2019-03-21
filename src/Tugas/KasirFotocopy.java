@@ -15,15 +15,15 @@ public class KasirFotocopy {
   
     public static void main(String[] args){
         //membuat variabel
-        boolean jalan =true;
+        boolean jalan=true;
         double jumlah, diskon, bayar;
         double harga=250.0;
-        String member, jawab;
+        String member;
         Scanner scan = new Scanner(System.in);
         
-        while ( jalan ){
+
             // mengambil input
-            System.out.print("Apakah ada kartu member ? ");
+            System.out.println("Apakah ada kartu member ?");
             System.out.print("Ketik Ya atau Tidak : ");
             member = scan.nextLine();
             System.out.print("Total Fotocopy: ");
@@ -59,14 +59,5 @@ public class KasirFotocopy {
             System.out.println("Total Diskon: Rp " + diskon);
             System.out.println("Total Bayar + Diskon : Rp " + bayar);
             System.out.println();
-            //perulangan
-            System.out.println("Apakah anda ingin keluar?");
-            System.out.print("Jawab [ya/tidak] : ");
-            
-            jawab = scan.nextLine();
-            if( jawab.equalsIgnoreCase("ya") ){
-                jalan = false;
-            }
-        }  
     }
 }
