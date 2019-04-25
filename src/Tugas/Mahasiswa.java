@@ -14,25 +14,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Mahasiswa {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
     // TODO code application logic here
     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-    int data =0;
-    String[] nama    = new String[30];
-    String[] nim     = new String[15];
-    Double[] IPS1    = new Double[20];
-    Double[] IPS2    = new Double[20];
-    Double[] IPS3    = new Double[20];
-    Double[] IPS4    = new Double[20];
-    Double[] IPS5    = new Double[20];
-    Double[] IPK    = new Double[20];
-    String[] hasil     = new String[15];
-
+    int data;
     System.out.println("BIODATA MAHASISWA");
     System.out.println("+===============INPUTAN============================+");
-    try{
-        System.out.print("Masukkan banyak data = ");
-        data = Integer.parseInt(input.readLine());
+    System.out.print("Masukkan banyak data = ");
+    data = Integer.parseInt(input.readLine());
+    String[] nama    = new String[data];
+    String[] nim     = new String[data];
+    Double[] IPS1    = new Double[data];
+    Double[] IPS2    = new Double[data];
+    Double[] IPS3    = new Double[data];
+    Double[] IPS4    = new Double[data];
+    Double[] IPS5    = new Double[data];
+    Double[] IPK    = new Double[data];
+    String[] hasil     = new String[data];
         for (int a=0;a<data;a++){
              System.out.println("------Data ke-"+ (a+1) +"------");
              System.out.print("Masukan Nim        = ");
@@ -62,9 +60,7 @@ public class Mahasiswa {
                     System.out.println("Hasil tidak diketahui");
                 }
          }
-    } catch (IOException e ){
-      System.out.println("Error");
-    }
+   
 
     System.out.println("+==============HASIL OUTPUT========================+");
     System.out.println("Banyak data : " + data);
